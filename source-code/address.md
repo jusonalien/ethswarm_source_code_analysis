@@ -7,7 +7,10 @@ underlay地址用来标识实际的物理地址，亦即IP地址，用来实现�
 
 swarm基于kadelima协议来实现全网的所有bee nodes之间的位查找，通讯等功能，本身要维护一个DHT(Distributed Hash Table)
 
+
 定义address的数据结构, bzz/address.go 文件
+
+
 ```go
 // Address represents the bzz address in swarm.
 // It consists of a peers underlay (physical) address, overlay (topology) address and signature.
