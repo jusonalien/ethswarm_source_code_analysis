@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>地址原理 · GitBook</title>
+        <title>基本原理 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="代码速读.html" />
+    <link rel="prev" href="tokenomic.html" />
     
 
     </head>
@@ -114,9 +114,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../project-background/project-history.html">
+        <li class="chapter " data-level="1.2.1" data-path="project-history.html">
             
-                <a href="../project-background/project-history.html">
+                <a href="project-history.html">
             
                     
                     项目历史
@@ -127,9 +127,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../project-background/tokenomic.html">
+        <li class="chapter " data-level="1.2.2" data-path="tokenomic.html">
             
-                <a href="../project-background/tokenomic.html">
+                <a href="tokenomic.html">
             
                     
                     经济模型
@@ -140,9 +140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../project-background/基本原理.html">
+        <li class="chapter active" data-level="1.2.3" data-path="基本原理.html">
             
-                <a href="../project-background/基本原理.html">
+                <a href="基本原理.html">
             
                     
                     基本原理
@@ -172,9 +172,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="代码速读.html">
+        <li class="chapter " data-level="1.3.1" data-path="../source-code/代码速读.html">
             
-                <a href="代码速读.html">
+                <a href="../source-code/代码速读.html">
             
                     
                     代码速读
@@ -185,9 +185,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="address.html">
+        <li class="chapter " data-level="1.3.2" data-path="../source-code/address.html">
             
-                <a href="address.html">
+                <a href="../source-code/address.html">
             
                     
                     地址原理
@@ -233,7 +233,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >地址原理</a>
+        <a href=".." >基本原理</a>
     </h1>
 </div>
 
@@ -248,24 +248,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="address">Address</h2>
-<p>&#x7528;&#x6765;&#x7BA1;&#x7406;overlay&#x548C;underlay&#x5730;&#x5740;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5176;&#x4E2D;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4E86;overlay&#x5730;&#x5740;&#x548C;underlay&#x5730;&#x5740;, 
-&#x5176;&#x4E2D;&#xFF0C;
-overlay&#x5730;&#x5740;&#x7528;&#x6765;&#x6807;&#x8BC6;&#x6BCF;&#x4E2A;bee nodes&#x5728;&#x62D3;&#x6251;&#x7F51;&#x7EDC;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;
-underlay&#x5730;&#x5740;&#x7528;&#x6765;&#x6807;&#x8BC6;&#x5B9E;&#x9645;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#xFF0C;&#x4EA6;&#x5373;IP&#x5730;&#x5740;&#xFF0C;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x7AEF;&#x5BF9;&#x7AEF;&#x7684;&#x7F51;&#x7EDC;&#x901A;&#x8BAF;</p>
-<p>swarm&#x57FA;&#x4E8E;kadelima&#x534F;&#x8BAE;&#x6765;&#x5B9E;&#x73B0;&#x5168;&#x7F51;&#x7684;&#x6240;&#x6709;bee nodes&#x4E4B;&#x95F4;&#x7684;&#x4F4D;&#x67E5;&#x627E;&#xFF0C;&#x901A;&#x8BAF;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x672C;&#x8EAB;&#x8981;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;DHT(Distributed Hash Table)</p>
-<p>&#x5B9A;&#x4E49;address&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;, bzz/address.go &#x6587;&#x4EF6;</p>
-<pre><code class="lang-go"><span class="hljs-comment">// Address represents the bzz address in swarm.</span>
-<span class="hljs-comment">// It consists of a peers underlay (physical) address, overlay (topology) address and signature.</span>
-<span class="hljs-comment">// Signature is used to verify the `Overlay/Underlay` pair, as it is based on `underlay|networkID`, signed with the public key of Overlay address</span>
-<span class="hljs-keyword">type</span> Address <span class="hljs-keyword">struct</span> {
-    Underlay        ma.Multiaddr
-    Overlay         swarm.Address
-    Signature       []<span class="hljs-keyword">byte</span>
-    Transaction     []<span class="hljs-keyword">byte</span>
-    EthereumAddress []<span class="hljs-keyword">byte</span>
-}
-</code></pre>
+                                <h1 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h1>
+<p>&#x8981;&#x9605;&#x8BFB;&#x6E90;&#x7801;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x5BF9;bee node&#x7684;&#x8FD0;&#x884C;&#x673A;&#x5236;(&#x67B6;&#x6784;&#xFF0C;&#x5E95;&#x5C42;)&#x7B49;&#x7684;&#x673A;&#x5236;&#x6709;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x638C;&#x63E1;</p>
+<h1 id="bee-node&#x5728;swarm&#x4E2D;&#x7684;&#x901A;&#x8BAF;&#x6A21;&#x578B;">Bee node&#x5728;swarm&#x4E2D;&#x7684;&#x901A;&#x8BAF;&#x6A21;&#x578B;</h1>
+<h1 id="&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x673A;&#x5236;">&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x673A;&#x5236;</h1>
+<h2 id="&#x5206;&#x89E3;&#x6587;&#x4EF6;&#x6210;chunk">&#x5206;&#x89E3;&#x6587;&#x4EF6;&#x6210;chunk</h2>
+<p>&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;&#x6587;&#x4EF6;&#x5207;&#x5272;&#x6210;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x5C0F;&#x5757;(chunk)&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6BCF;&#x4E2A;chunk&#x4F5C;&#x4E3A;&#x53F6;&#x5B50;&#x6784;&#x9020;&#x4E00;&#x4E2A;<code>merkle-tree</code>&#xFF0C;&#x968F;&#x540E;&#x8FD9;&#x4E9B;chunk&#x4F1A;&#x88AB;&#x5206;&#x6563;&#x5728;&#x4E0D;&#x540C;&#x7684;bee node&#x4E2D;&#x5B58;&#x50A8;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x88AB;&#x8FFD;&#x8E2A;&#x5B9A;&#x4F4D;&#x7684;&#x6548;&#x679C;</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;chunk&#x5927;&#x5C0F;&#x4E3A;<code>4KB</code>&#xFF0C;&#x6BCF;&#x4E2A;chunk&#x90FD;&#x6709;&#x72EC;&#x7ACB;&#x7684;address
+&#x8BBE;&#x8BA1;&#x6210;&#x8FD9;&#x6837;&#x7684;&#x539F;&#x56E0;&#x662F;&#x9632;&#x6B62;bee node&#x7684;onwer&#x6CA1;&#x529E;&#x6CD5;&#x8F7B;&#x6613;&#x7684;&#x4ECE;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;(chunk)&#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x5B8C;&#x6574;&#x7684;&#x539F;&#x59CB;&#x5185;&#x5BB9;&#xFF0C;<strong>&#x4ECE;&#x800C;&#x786E;&#x4FDD;&#x6570;&#x636E;&#x7684;&#x9690;&#x79C1;&#x6027;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x968F;&#x610F;&#x5BA1;&#x67E5;&#x5230;</strong>&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x7528;&#x6237;&#x4E0A;&#x4F20;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x505A;&#x4E00;&#x5C42;&#x52A0;&#x5BC6;&#xFF0C;&#x52A0;&#x5F3A;&#x6570;&#x636E;&#x7684;&#x673A;&#x5BC6;&#x7A0B;&#x5EA6;</p>
+<p><img src="imgs/swarm-BMT.png" alt=""></p>
+<h2 id="&#x5C06;chunk&#x653E;&#x7F6E;&#x5230;swarm&#x96C6;&#x7FA4;&#x4E2D;">&#x5C06;chunk&#x653E;&#x7F6E;&#x5230;swarm&#x96C6;&#x7FA4;&#x4E2D;</h2>
+<p>bee node&#x901A;&#x8FC7;<code>push-sync</code>(swarm&#x7684;&#x5185;&#x90E8;&#x534F;&#x8BAE;)&#x534F;&#x8BAE;&#x5C06;chunk&#x653E;&#x5230;swarm&#x96C6;&#x7FA4;&#x4E2D;</p>
+<h2 id="&#x5197;&#x4F59;&#x673A;&#x5236;">&#x5197;&#x4F59;&#x673A;&#x5236;</h2>
+<p>&#x6BCF;&#x4E2A;chunk&#x90FD;&#x4F1A;&#x8BA9;&#x5468;&#x56F4;&#x6BD4;&#x8F83;&#x9760;&#x8FD1;&#x7684;bee node&#x90FD;&#x5B58;&#x4E00;&#x4EFD;&#xFF0C;&#x4EE5;&#x6B64;&#x505A;&#x6570;&#x636E;&#x5197;&#x4F59;</p>
+<h2 id="&#x7591;&#x95EE;&#xFF1F;">&#x7591;&#x95EE;&#xFF1F;</h2>
+<h1 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;">&#x53C2;&#x8003;&#x6587;&#x7AE0;</h1>
+<ul>
+<li><a href="https://www.ethswarm.org/swarm-whitepaper.pdf" target="_blank">https://www.ethswarm.org/swarm-whitepaper.pdf</a></li>
+<li><a href="https://www.ethswarm.org/The-Book-of-Swarm.pdf" target="_blank">https://www.ethswarm.org/The-Book-of-Swarm.pdf</a></li>
+</ul>
 
                                 
                                 </section>
@@ -293,7 +294,7 @@ underlay&#x5730;&#x5740;&#x7528;&#x6765;&#x6807;&#x8BC6;&#x5B9E;&#x9645;&#x7684;
 
             
                 
-                <a href="代码速读.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 代码速读">
+                <a href="tokenomic.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 经济模型">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -305,7 +306,7 @@ underlay&#x5730;&#x5740;&#x7528;&#x6765;&#x6807;&#x8BC6;&#x5B9E;&#x9645;&#x7684;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"地址原理","level":"1.3.2","depth":2,"previous":{"title":"代码速读","level":"1.3.1","depth":2,"path":"source-code/代码速读.md","ref":"source-code/代码速读.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"source-code/address.md","mtime":"2021-11-18T08:47:33.099Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-23T09:33:11.606Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本原理","level":"1.2.3","depth":2,"next":{"title":"源码分析","level":"1.3","depth":1,"ref":"","articles":[{"title":"代码速读","level":"1.3.1","depth":2,"path":"source-code/代码速读.md","ref":"source-code/代码速读.md","articles":[]},{"title":"地址原理","level":"1.3.2","depth":2,"path":"source-code/address.md","ref":"source-code/address.md","articles":[]}]},"previous":{"title":"经济模型","level":"1.2.2","depth":2,"path":"project-background/tokenomic.md","ref":"project-background/tokenomic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"project-background/基本原理.md","mtime":"2021-11-23T09:58:18.944Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-23T09:33:11.606Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
